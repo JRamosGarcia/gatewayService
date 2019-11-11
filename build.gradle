@@ -20,6 +20,7 @@ ext {
 
 dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-zuul'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
@@ -51,7 +52,7 @@ docker {
 
 //Este es mi formato
 docker {
-    name "localhost:5000/gateway_server:latest"
-    copySpec.from("build/libs/gateway-0.0.1-SNAPSHOT.jar").into("app")
+    name "localhost:5000/gateway_service:latest"
+    copySpec.from("build/libs/gatewayService-0.0.1-SNAPSHOT.jar").into("app")
     buildArgs(['DEPENDENCY': "app"])
 }

@@ -8,7 +8,7 @@ RUN apk add --update \
 VOLUME /tmp
 
 #Opcion funciona con linea de comandos
-#COPY build/libs/configurationServer-0.0.1-SNAPSHOT.jar app.jar
+#COPY build/libs/gatewayService-0.0.1-SNAPSHOT.jar app.jar
 #ENTRYPOINT ["java", "-jar", "app.jar"]
 
 #Opcion funciona con ejemplo de spring boot
@@ -20,4 +20,4 @@ VOLUME /tmp
 
 #Opcion funciona mio
 COPY ${DEPENDENCY} /
-ENTRYPOINT ["java", "-jar", "/app/gateway-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/gatewayService-0.0.1-SNAPSHOT.jar"]
