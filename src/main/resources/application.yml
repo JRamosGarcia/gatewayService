@@ -10,3 +10,18 @@ eureka:
 spring:
   application:
     name: gatewayService
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+
+#Cuidado que los nombres de los servicios deben estar en MINUSCULAS
+#zuul:
+#  ignored-services: '*'
+#  prefix: /api
+#  routes:
+#    bitcoindadapter: /bitcoindAdapter/**
+#    txmempool: /txMemPool/**
