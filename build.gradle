@@ -36,19 +36,17 @@ test {
 	useJUnitPlatform()
 }
 
-/*// Esto es formato recomendado
-task unpack(type: Copy) {
-    dependsOn bootJar
-    from(zipTree(tasks.bootJar.outputs.files.singleFile))
-    into("build/dependency")
-}
-
-docker {
-    name "localhost:5000/gateway_server:latest"
-    copySpec.from(tasks.unpack.outputs).into("dependency")
-    buildArgs(['DEPENDENCY': "dependency"])
-}
-*/
+// Esto es formato recomendado
+//task unpack(type: Copy) {
+//    dependsOn bootJar
+//    from(zipTree(tasks.bootJar.outputs.files.singleFile))
+//    into("build/dependency")
+//}
+//docker {
+//    name "localhost:5000/gateway_server:latest"
+//    copySpec.from(tasks.unpack.outputs).into("dependency")
+//    buildArgs(['DEPENDENCY': "dependency"])
+//}
 
 //Este es mi formato
 docker {
