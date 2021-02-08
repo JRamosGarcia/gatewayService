@@ -19,9 +19,9 @@ management:
         - "*"
 
 #Cuidado que los nombres de los servicios deben estar en MINUSCULAS
-#zuul:
-#  ignored-services: '*'
-#  prefix: /api
-#  routes:
-#    bitcoindadapter: /bitcoindAdapter/**
-#    txmempool: /txMemPool/**
+zuul:
+  ignored-services: '*'
+  #prefix: /api
+  routes:
+ #   bitcoindadapter: /bitcoindAdapter/**
+    txmempool: /txmempool/**
